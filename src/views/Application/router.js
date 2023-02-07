@@ -1,27 +1,27 @@
 export default [
     {
-        path: '/configuration/application',
-        name: 'Application',
+        path: '/purchasing/prospective-vendor',
+        name: 'ProspectiveVendor',
         component: () => import("./Index.vue"),
         meta: {
             auth: true,
-            title: 'Application List'
+            title: 'Prospective Vendor List'
         }
     },
     {
-        path: '/configuration/application/update/:id',
-        name: 'ApplicationUpdate',
-        component: () => import("./Update.vue"),
+        path: '/purchasing/prospective-vendor/detail/:id',
+        name: 'ProspectiveVendorDetail',
+        component: () => import("./Detail.vue"),
         meta: {
             auth: true,
-            title: 'Application Update',
+            title: 'Prospective Vendor Detail',
             breadcrumbs : [
                 {
-                    text: 'Application List',
-                    to : '/configuration/application'
+                    text: 'Prospective Vendor List',
+                    to : '/purchasing/prospective-vendor'
                 },
                 {
-                    text: 'Application Update',
+                    text: 'Prospective Vendor Detail',
                 },
             ],
         }
