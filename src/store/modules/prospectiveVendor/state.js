@@ -1,4 +1,5 @@
 const state = {
+    // Readlist Prospective Vendor
     prospective_vendor_list: {
         isLoading: false,
         data: [],
@@ -60,6 +61,12 @@ const state = {
                 value:3
             },
         ],
+    },
+
+    // Detail Prospective Vendor
+    prospective_vendor_detail: {
+        isLoading: false,
+        data: [],
     },
 };
 

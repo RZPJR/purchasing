@@ -1,6 +1,7 @@
 import http from "../../../services/http";
 
 const actions = {
+    // Readlist Prospective Vendor
     fetchProspectiveVendor: async ({ state, commit }, payload) => {
         commit("setPreloadProspectiveVendor", true)
         commit("setProspectiveVendor", [])
@@ -19,6 +20,20 @@ const actions = {
         } catch (error) {
             console.log(error)
             commit("setPreloadProspectiveVendor", false)
+        }
+    },
+    
+    // Detail Prospective Vendor
+    fetchProspectiveVendorDetail: async ({ state, commit }, payload) => {
+        commit("setPreloadProspectiveVendorDetail", true)
+        commit("setProspectiveVendorDetail", [])
+        try {
+            // const response = await http.get('/app'+payload.id);
+            // if(response.data.data !== null) commit("setProspectiveVendorDetail", response.data.data)            
+            commit("setPreloadProspectiveVendorDetail", false)
+        } catch (error) {
+            console.log(error)
+            commit("setPreloadProspectiveVendorDetail", false)
         }
     },
 }
